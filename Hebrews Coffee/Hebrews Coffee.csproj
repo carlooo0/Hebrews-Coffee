@@ -1,0 +1,1372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2771970E-A25A-43D1-AC55-52195F779F50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hebrews_Coffee</RootNamespace>
+    <AssemblyName>Hebrews Coffee</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Utils.1.0.5\lib\net45\Bunifu.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adminside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adminside.Designer.cs">
+      <DependentUpon>Adminside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="catArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="catArchive.Designer.cs">
+      <DependentUpon>catArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="category.Designer.cs">
+      <DependentUpon>category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dinein.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dinein.Designer.cs">
+      <DependentUpon>Dinein.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet37.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet39.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet39.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet40.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet40.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet42.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet43.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet43.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet44.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet44.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet45.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet45.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet46.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet46.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet47.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet47.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet48.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet48.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet49.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet49.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet50.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet50.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet51.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet52.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet52.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet53.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet53.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet54.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet54.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet55.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet55.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet56.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet56.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet57.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet57.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet58.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet58.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet59.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet59.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet60.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet60.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HebrewsDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HebrewsDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mainclass.cs" />
+    <Compile Include="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductControl.Designer.cs">
+      <DependentUpon>ProductControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales.Designer.cs">
+      <DependentUpon>sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffView.Designer.cs">
+      <DependentUpon>StaffView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stocks.Designer.cs">
+      <DependentUpon>stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takeout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takeout.Designer.cs">
+      <DependentUpon>Takeout.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Adminside.resx">
+      <DependentUpon>Adminside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="catArchive.resx">
+      <DependentUpon>catArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="category.resx">
+      <DependentUpon>category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dinein.resx">
+      <DependentUpon>Dinein.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="sales.resx">
+      <DependentUpon>sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffView.resx">
+      <DependentUpon>StaffView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stocks.resx">
+      <DependentUpon>stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takeout.resx">
+      <DependentUpon>Takeout.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="HebrewsDataSet.xsc">
+      <DependentUpon>HebrewsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet.xss">
+      <DependentUpon>HebrewsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet1.xsc">
+      <DependentUpon>HebrewsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet1.xss">
+      <DependentUpon>HebrewsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet10.xsc">
+      <DependentUpon>HebrewsDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet10.xss">
+      <DependentUpon>HebrewsDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet11.xsc">
+      <DependentUpon>HebrewsDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet11.xss">
+      <DependentUpon>HebrewsDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet12.xsc">
+      <DependentUpon>HebrewsDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet12.xss">
+      <DependentUpon>HebrewsDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet13.xsc">
+      <DependentUpon>HebrewsDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet13.xss">
+      <DependentUpon>HebrewsDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet14.xsc">
+      <DependentUpon>HebrewsDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet14.xss">
+      <DependentUpon>HebrewsDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet15.xsc">
+      <DependentUpon>HebrewsDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet15.xss">
+      <DependentUpon>HebrewsDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet16.xsc">
+      <DependentUpon>HebrewsDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet16.xss">
+      <DependentUpon>HebrewsDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet17.xsc">
+      <DependentUpon>HebrewsDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet17.xss">
+      <DependentUpon>HebrewsDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet18.xsc">
+      <DependentUpon>HebrewsDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet18.xss">
+      <DependentUpon>HebrewsDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet19.xsc">
+      <DependentUpon>HebrewsDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet19.xss">
+      <DependentUpon>HebrewsDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet2.xsc">
+      <DependentUpon>HebrewsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet2.xss">
+      <DependentUpon>HebrewsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet20.xsc">
+      <DependentUpon>HebrewsDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet20.xss">
+      <DependentUpon>HebrewsDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet21.xsc">
+      <DependentUpon>HebrewsDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet21.xss">
+      <DependentUpon>HebrewsDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet22.xsc">
+      <DependentUpon>HebrewsDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet22.xss">
+      <DependentUpon>HebrewsDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet23.xsc">
+      <DependentUpon>HebrewsDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet23.xss">
+      <DependentUpon>HebrewsDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet24.xsc">
+      <DependentUpon>HebrewsDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet24.xss">
+      <DependentUpon>HebrewsDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet25.xsc">
+      <DependentUpon>HebrewsDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet25.xss">
+      <DependentUpon>HebrewsDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet26.xsc">
+      <DependentUpon>HebrewsDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet26.xss">
+      <DependentUpon>HebrewsDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet27.xsc">
+      <DependentUpon>HebrewsDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet27.xss">
+      <DependentUpon>HebrewsDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet28.xsc">
+      <DependentUpon>HebrewsDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet28.xss">
+      <DependentUpon>HebrewsDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet29.xsc">
+      <DependentUpon>HebrewsDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet29.xss">
+      <DependentUpon>HebrewsDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet3.xsc">
+      <DependentUpon>HebrewsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet3.xss">
+      <DependentUpon>HebrewsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet30.xsc">
+      <DependentUpon>HebrewsDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet30.xss">
+      <DependentUpon>HebrewsDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet31.xsc">
+      <DependentUpon>HebrewsDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet31.xss">
+      <DependentUpon>HebrewsDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet32.xsc">
+      <DependentUpon>HebrewsDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet32.xss">
+      <DependentUpon>HebrewsDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet33.xsc">
+      <DependentUpon>HebrewsDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet33.xss">
+      <DependentUpon>HebrewsDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet34.xsc">
+      <DependentUpon>HebrewsDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet34.xss">
+      <DependentUpon>HebrewsDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet35.xsc">
+      <DependentUpon>HebrewsDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet35.xss">
+      <DependentUpon>HebrewsDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet36.xsc">
+      <DependentUpon>HebrewsDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet36.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet36.xss">
+      <DependentUpon>HebrewsDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet37.xsc">
+      <DependentUpon>HebrewsDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet37.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet37.xss">
+      <DependentUpon>HebrewsDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet38.xsc">
+      <DependentUpon>HebrewsDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet38.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet38.xss">
+      <DependentUpon>HebrewsDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet39.xsc">
+      <DependentUpon>HebrewsDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet39.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet39.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet39.xss">
+      <DependentUpon>HebrewsDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet4.xsc">
+      <DependentUpon>HebrewsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet4.xss">
+      <DependentUpon>HebrewsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet40.xsc">
+      <DependentUpon>HebrewsDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet40.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet40.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet40.xss">
+      <DependentUpon>HebrewsDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet41.xsc">
+      <DependentUpon>HebrewsDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet41.xss">
+      <DependentUpon>HebrewsDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet42.xsc">
+      <DependentUpon>HebrewsDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet42.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet42.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet42.xss">
+      <DependentUpon>HebrewsDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet43.xsc">
+      <DependentUpon>HebrewsDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet43.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet43.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet43.xss">
+      <DependentUpon>HebrewsDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet44.xsc">
+      <DependentUpon>HebrewsDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet44.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet44.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet44.xss">
+      <DependentUpon>HebrewsDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet45.xsc">
+      <DependentUpon>HebrewsDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet45.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet45.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet45.xss">
+      <DependentUpon>HebrewsDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet46.xsc">
+      <DependentUpon>HebrewsDataSet46.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet46.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet46.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet46.xss">
+      <DependentUpon>HebrewsDataSet46.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet47.xsc">
+      <DependentUpon>HebrewsDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet47.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet47.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet47.xss">
+      <DependentUpon>HebrewsDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet48.xsc">
+      <DependentUpon>HebrewsDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet48.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet48.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet48.xss">
+      <DependentUpon>HebrewsDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet49.xsc">
+      <DependentUpon>HebrewsDataSet49.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet49.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet49.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet49.xss">
+      <DependentUpon>HebrewsDataSet49.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet5.xsc">
+      <DependentUpon>HebrewsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet5.xss">
+      <DependentUpon>HebrewsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet50.xsc">
+      <DependentUpon>HebrewsDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet50.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet50.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet50.xss">
+      <DependentUpon>HebrewsDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet51.xsc">
+      <DependentUpon>HebrewsDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet51.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet51.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet51.xss">
+      <DependentUpon>HebrewsDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet52.xsc">
+      <DependentUpon>HebrewsDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet52.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet52.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet52.xss">
+      <DependentUpon>HebrewsDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet53.xsc">
+      <DependentUpon>HebrewsDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet53.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet53.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet53.xss">
+      <DependentUpon>HebrewsDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet54.xsc">
+      <DependentUpon>HebrewsDataSet54.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet54.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet54.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet54.xss">
+      <DependentUpon>HebrewsDataSet54.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet55.xsc">
+      <DependentUpon>HebrewsDataSet55.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet55.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet55.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet55.xss">
+      <DependentUpon>HebrewsDataSet55.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet56.xsc">
+      <DependentUpon>HebrewsDataSet56.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet56.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet56.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet56.xss">
+      <DependentUpon>HebrewsDataSet56.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet57.xsc">
+      <DependentUpon>HebrewsDataSet57.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet57.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet57.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet57.xss">
+      <DependentUpon>HebrewsDataSet57.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet58.xsc">
+      <DependentUpon>HebrewsDataSet58.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet58.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet58.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet58.xss">
+      <DependentUpon>HebrewsDataSet58.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet59.xsc">
+      <DependentUpon>HebrewsDataSet59.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet59.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet59.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet59.xss">
+      <DependentUpon>HebrewsDataSet59.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet6.xsc">
+      <DependentUpon>HebrewsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet6.xss">
+      <DependentUpon>HebrewsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet60.xsc">
+      <DependentUpon>HebrewsDataSet60.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet60.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet60.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet60.xss">
+      <DependentUpon>HebrewsDataSet60.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet7.xsc">
+      <DependentUpon>HebrewsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet7.xss">
+      <DependentUpon>HebrewsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet8.xsc">
+      <DependentUpon>HebrewsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet8.xss">
+      <DependentUpon>HebrewsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet9.xsc">
+      <DependentUpon>HebrewsDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="HebrewsDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HebrewsDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HebrewsDataSet9.xss">
+      <DependentUpon>HebrewsDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-cup-logo-coffee-shop-icon-design-free-vector-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-engraved-fruit-tea-healthy-drink-graphic-isolated-illustration-2HFKWY3-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stocks-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saless-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saless.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heb logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heb_logo-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-search-icon-2907-thumb.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heb_pic_2-removebg-preview.png" />
+    <None Include="Resources\vategory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heb_logo-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hebpeee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heb_pic_5-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fruit-removebg-preview.png" />
+    <None Include="Resources\heb_pic_3-removebg-preview.png" />
+    <None Include="Resources\heb_pic-removebg-preview.png" />
+    <None Include="Resources\heb_pic_4-removebg-preview.png" />
+    <None Include="Resources\istockphoto-682380852-612x612-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hebrews.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
